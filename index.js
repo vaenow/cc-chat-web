@@ -175,14 +175,15 @@ function removeFromUserList(list, user) {
 }
 
 function addMessage(list, msg) {
-
   list.push(msg);
-  $("#message-list")
-    .parent()
-    .animate(
-      {
-        scrollTop: $("#message-list").height()
-      },
-      200
-    );
+  setTimeout(() => {
+    $("#message-list")
+      .parent()
+      .animate(
+        {
+          scrollTop: $("#message-list").height()
+        },
+        200
+      );
+  }, 50);
 }
